@@ -15,7 +15,7 @@ end, {})
 -- Terminal-Normal Mode
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 
--- coc.nvim: autocomplete
+-- Autocomplete with coc.nvim
 function _G.check_back_space()
     local col = vim.fn.col('.') - 1
     return col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') ~= nil
@@ -26,13 +26,13 @@ keymap("i", "<TAB>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_spa
 keymap("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], cocAcOpts)
 keymap("i", "<c-space>", "coc#refresh()", {silent = true, expr = true})
 
--- coc.nvim: code navigation
+-- Code navigation with coc.nvim
 keymap("n", "gd", "<Plug>(coc-definition)", {silent = true})
 keymap("n", "gy", "<Plug>(coc-type-definition)", {silent = true})
 keymap("n", "gi", "<Plug>(coc-implementation)", {silent = true})
 keymap("n", "gr", "<Plug>(coc-references)", {silent = true})
 
--- coc.nvim: Use K to show documentation in preview window
+-- Show documentation with coc.nvim
 function _G.show_docs()
     local cw = vim.fn.expand('<cword>')
     if vim.fn.index({'vim', 'help'}, vim.bo.filetype) >= 0 then
