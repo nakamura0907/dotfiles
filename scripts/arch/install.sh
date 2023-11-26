@@ -12,7 +12,7 @@ echo ""
 
 sudo pacman -S --needed \
     neovim \
-    polybar
+    polybar nm-connection-editor \
 
 # 設定ファイルの配置
 echo ""
