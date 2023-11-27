@@ -65,7 +65,9 @@ return packer.startup(function(use)
 
     -- Icon
     -- required nerd fonts
-    -- use "nvim-tree/nvim-web-devicons"
+    use "nvim-tree/nvim-web-devicons"
+    use "lambdalisue/nerdfont.vim"
+    use "lambdalisue/fern-renderer-nerdfont.vim"
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
@@ -73,3 +75,4 @@ return packer.startup(function(use)
 		require("packer").sync()
 	end
 end)
+

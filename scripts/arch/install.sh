@@ -11,6 +11,7 @@ echo "========================================"
 echo ""
 
 sudo pacman -S --needed \
+    alacritty \
     neovim \
     polybar nm-connection-editor \
 
