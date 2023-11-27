@@ -12,6 +12,7 @@ echo ""
 
 sudo pacman -S --needed \
     alacritty \
+    git \
     neovim \
     polybar nm-connection-editor \
 
@@ -25,6 +26,8 @@ echo ""
 for f in $PROJECT_ROOT/.config/*; do
     ln -snfv $f ~/.config/
 done
+
+ln -snfv $PROJECT_ROOT/.gitconfig ~/
 
 #  終了
 echo ""
