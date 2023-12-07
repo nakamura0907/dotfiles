@@ -14,7 +14,7 @@ sudo pacman -S --needed \
     alacritty \
     git \
     neovim \
-    polybar nm-connection-editor \
+    polybar nm-connection-editor pcmanfm code pacman-contrib \
 
 # 設定ファイルの配置
 echo ""
