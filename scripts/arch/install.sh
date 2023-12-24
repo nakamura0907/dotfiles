@@ -14,7 +14,9 @@ sudo pacman -S --needed \
     alacritty \
     git \
     neovim \
-    polybar nm-connection-editor pcmanfm code pacman-contrib \
+    polybar nm-connection-editor pcmanfm pacman-contrib \
+    xmonad xmonad-contrib \
+yay -S --needed visual-studio-code-bin
 
 # 設定ファイルの配置
 echo ""
@@ -28,6 +30,7 @@ for f in $PROJECT_ROOT/.config/*; do
 done
 
 ln -snfv $PROJECT_ROOT/.gitconfig ~/
+ln -snfv $PROJECT_ROOT/.xmonad/xmonad.hs ~/.xmonad/
 
 #  終了
 echo ""
