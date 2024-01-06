@@ -1,19 +1,6 @@
-#                                      
-#                                      
-#   ■■■■                               
-#  ■   ■■         ■■                   
-#  ■    ■   ■■    ■                    
-#  ■■      ■■ ■■ ■■■■ ■■■  ■■  ■■ ■■■  
-#   ■■■   ■■   ■  ■    ■    ■   ■   ■■ 
-#     ■■  ■    ■  ■    ■    ■   ■    ■ 
-#      ■■ ■■■■■■  ■    ■    ■   ■    ■ 
-#  ■    ■ ■       ■    ■    ■   ■    ■ 
-#  ■   ■■  ■   ■  ■    ■■  ■■   ■   ■■ 
-#  ■■■■■   ■■■■■  ■■■■  ■■■ ■■  ■ ■■■  
-#                               ■      
-#                               ■      
-#                               ■      
-#                              ■■■      
+# ----------------------------------------
+# 1. Setup
+# ----------------------------------------
 
 ZSH="$HOME/.oh-my-zsh"
 
@@ -27,22 +14,29 @@ source $ZSH/oh-my-zsh.sh
 
 # eval "$(starship init zsh)"
 
-
-
-# 後でやる
+# zsh settings
 setopt autocd
 autoload -Uz compinit && compinit
 
-# エイリアス
+# ----------------------------------------
+# 2. Aliases
+# ----------------------------------------
+
 alias vim="nvim"
 
-# Export 
+# ----------------------------------------
+# 3. environment variables
+# ----------------------------------------
+
 export PATH="/opt/flutter/bin:$PATH"
 export PATH="$PATH:$(go env GOPATH)/bin"
 
-# bun completions
-[ -s "/home/nakamura0907/.bun/_bun" ] && source "/home/nakamura0907/.bun/_bun"
-
 # bun
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# ----------------------------------------
+# 4. Others
+# ----------------------------------------
