@@ -22,6 +22,11 @@ setopt autocd
 # 2. Aliases
 # ----------------------------------------
 
+# default
+alias cp="cp -i"
+alias mv="mv -i"
+alias rm="rm -i"
+
 # ls
 alias la="ls -A"
 alias ll="ls -AlhF"
