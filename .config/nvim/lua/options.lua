@@ -28,3 +28,6 @@ for k, v in pairs(options) do
 end
 
 vim.opt.clipboard:append{'unnamedplus'}
+
+-- Fern
+vim.g["fern#default_hidden"] = 1
