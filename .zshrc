@@ -18,11 +18,11 @@ source $ZSH/oh-my-zsh.sh
 setopt autocd # cdコマンドの省略
 setopt autopushd # cd時にディレクトリをスタックに積む
 setopt correct # コマンドのスペルミスを訂正
-setopt sharehistory # コマンドの履歴を共有する
 setopt histignoredups # 重複したコマンドは履歴に残さない
 setopt histignorespace # 行頭にスペースがあるコマンドは履歴に残さない
 setopt histreduceblanks # 余分なスペースは削除して履歴に残す
 setopt histsavenodups # 重複したコマンドは履歴に残さない
+setopt sharehistory # コマンドの履歴を共有する
 
 # autoload -Uz compinit && compinit
 

@@ -31,6 +31,7 @@ done
 
 ln -snfv $PROJECT_ROOT/.gitconfig ~/
 ln -snfv $PROJECT_ROOT/.xmonad/xmonad.hs ~/.xmonad/
+ln -snfv $PROJECT_ROOT/.zshrc ~/
 
 #  終了
 echo ""
