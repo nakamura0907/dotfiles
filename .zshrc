@@ -16,11 +16,15 @@ source $ZSH/oh-my-zsh.sh
 
 # zsh settings
 setopt autocd
-autoload -Uz compinit && compinit
+# autoload -Uz compinit && compinit
 
 # ----------------------------------------
 # 2. Aliases
 # ----------------------------------------
+
+# ls
+alias la="ls -A"
+alias ll="ls -AlhF"
 
 alias vim="nvim"
 
