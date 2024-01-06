@@ -16,6 +16,7 @@ sudo pacman -S --needed \
     neovim \
     polybar nm-connection-editor pcmanfm pacman-contrib \
     xmonad xmonad-contrib \
+    
 yay -S --needed visual-studio-code-bin
 
 # 設定ファイルの配置

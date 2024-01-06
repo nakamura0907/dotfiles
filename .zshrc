@@ -36,7 +36,7 @@ alias mv="mv -i"
 alias rm="rm -i"
 
 # ls
-alias la="ls -A"
+alias la="ls -AF"
 alias ll="ls -AlhF"
 
 # others
