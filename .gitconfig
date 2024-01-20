@@ -23,3 +23,4 @@
 	d = diff
 	
 	lg = log -10 --color=always --all --graph --topo-order --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    graph = log --graph --oneline --decorate=full
