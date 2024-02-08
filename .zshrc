@@ -60,4 +60,4 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # 4. Others
 # ----------------------------------------
 
-source /usr/share/nvm/init-nvm.sh
+source /usr/share/nvm/init-nvm.sh # Node Version Manager
