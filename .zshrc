@@ -47,7 +47,7 @@ alias vim="nvim"
 # 3. environment variables
 # ----------------------------------------
 
-export PATH="/opt/flutter/bin:$PATH"
+export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$(go env GOPATH)/bin"
 
 # bun
@@ -59,3 +59,5 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # ----------------------------------------
 # 4. Others
 # ----------------------------------------
+
+source /usr/share/nvm/init-nvm.sh
