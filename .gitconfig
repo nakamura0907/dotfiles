@@ -10,7 +10,7 @@
 [pager]
 	config = cat
 	branch = cat
-	log = cat
+	log = less
 [alias]
 	tags = tag -l
 	branches = branch -a
