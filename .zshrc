@@ -13,7 +13,7 @@ plugins=(
 )
 source $ZSH/oh-my-zsh.sh
 
-# eval "$(starship init zsh)"
+eval "$(starship init zsh)"
 
 # zsh settings
 setopt autocd # cdコマンドの省略
