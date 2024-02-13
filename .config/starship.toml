@@ -51,6 +51,7 @@ symbol = " "
 
 [time]
 disabled = false
+time_format = '%F(%a) %T'
 
 [username]
 show_always = true
