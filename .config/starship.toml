@@ -2,6 +2,18 @@
 scan_timeout = 0
 add_newline = true
 
+format = """
+$all \
+$time\
+$line_break \
+$jobs\
+$battery\
+$status\
+$os\
+$container\
+$shell\
+$character"""
+
 [character]
 error_symbol = "[✗](bold red)"
 success_symbol = "[➜](bold green)"
@@ -38,7 +50,7 @@ Arch = "[ ](bold #168ECA)"
 symbol = " "
 
 [time]
-# disabled = false
+disabled = false
 
 [username]
 show_always = true
