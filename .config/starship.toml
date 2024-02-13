@@ -14,37 +14,32 @@ $container\
 $shell\
 $character"""
 
-[character]
-error_symbol = "[✗](bold red)"
-success_symbol = "[➜](bold green)"
-
-[directory]
-truncation_length = 100
-truncate_to_repo = false
-read_only = " 󰌾"
-
-[docker_context]
-symbol = " "
-
-[git_branch]
-symbol = " "
-
-[golang]
-symbol = " "
+[username]
+show_always = true
+style_user = '#04d500'
+format = '[$user]($style) '
 
 [localip]
 ssh_only = false
 format = '@[$localipv4](bold red) '
 disabled = false
 
+[directory]
+truncation_length = 100
+truncate_to_repo = false
+read_only = " 󰌾"
+
+[git_branch]
+symbol = " "
+
+[docker_context]
+symbol = " "
+
+[golang]
+symbol = " "
+
 [nodejs]
 symbol = " "
-
-[os]
-disabled = false
-style = "bold white"
-[os.symbols]
-Arch = "[ ](bold #168ECA)"
 
 [rust]
 symbol = " "
@@ -53,7 +48,12 @@ symbol = " "
 disabled = false
 time_format = '%F(%a) %T'
 
-[username]
-show_always = true
-style_user = '#04d500'
-format = '[$user]($style) '
+[os]
+disabled = false
+style = "bold white"
+[os.symbols]
+Arch = "[ ](bold #168ECA)"
+
+[character]
+error_symbol = "[✗](bold red)"
+success_symbol = "[➜](bold green)"
