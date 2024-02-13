@@ -33,7 +33,8 @@ myTerminal = "alacritty"
 myManageHook :: ManageHook
 myManageHook =
   composeAll
-    [ className =? "Stalonetray" --> doFloat
+    [ className =? "Stalonetray" --> doFloat,
+      className =? "zoom" --> doFloat
     ]
 
 ------------------------
