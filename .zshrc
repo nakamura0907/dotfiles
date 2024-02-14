@@ -47,7 +47,10 @@ alias vim="nvim"
 # 3. environment variables
 # ----------------------------------------
 
+# Rust
 export PATH="$PATH:$HOME/.cargo/bin"
+
+# Go
 export PATH="$PATH:$(go env GOPATH)/bin"
 
 # bun

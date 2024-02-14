@@ -13,7 +13,8 @@ main =
     ewmh $
       docks $
         def
-          { startupHook = spawnOnce "~/.config/polybar/launch.sh &",
+          { 
+            startupHook = spawnOnce "~/.config/polybar/launch.sh &",
             manageHook = myManageHook <+> manageHook def,
             layoutHook = avoidStruts $ spacing 2 $ layoutHook def,
             terminal = myTerminal,
@@ -32,9 +33,9 @@ myTerminal = "alacritty"
 ------------------------
 
 myManageHook :: ManageHook
-myManageHook =
-  composeAll
-    [ className =? "Stalonetray" --> doFloat,
+myManageHook = composeAll
+    [ 
+      className =? "Stalonetray" --> doFloat,
       className =? "zoom" --> doFloat
     ]
 
@@ -43,6 +44,7 @@ myManageHook =
 ------------------------
 
 myKeys =
-  [ ("<XF86AudioMute>", spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle"),
+  [ 
+    ("<XF86AudioMute>", spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle"),
     ("M1-S-l", spawn "i3lock-fancy")
   ]
