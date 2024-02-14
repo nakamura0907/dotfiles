@@ -39,6 +39,13 @@ myModMask :: KeyMask
 myModMask = mod4Mask
 
 ------------------------
+-- borderWidth
+------------------------
+
+myBorderWidth :: Dimension
+myBorderWidth = 2
+
+------------------------
 -- startupHook
 ------------------------
 
@@ -70,6 +77,7 @@ main =
             layoutHook = myLayoutHook,
             manageHook = myManageHook <+> manageHook def,
             modMask = myModMask,
+            borderWidth = myBorderWidth,
             startupHook = myStartupHook
           }
           `additionalKeysP` myKeys
