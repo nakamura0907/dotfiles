@@ -5,6 +5,7 @@ import XMonad.Hooks.StatusBar
 import XMonad.Hooks.StatusBar.PP
 import XMonad.Util.EZConfig (additionalKeysP)
 import XMonad.Util.SpawnOnce (spawnOnce)
+import XMonad.Layout.Spacing
 
 main :: IO ()
 main =
@@ -14,7 +15,7 @@ main =
         def
           { startupHook = spawnOnce "~/.config/polybar/launch.sh &",
             manageHook = myManageHook <+> manageHook def,
-            layoutHook = avoidStruts $ layoutHook def,
+            layoutHook = avoidStruts $ spacing 2 $ layoutHook def,
             terminal = myTerminal,
             modMask = mod4Mask
           }
