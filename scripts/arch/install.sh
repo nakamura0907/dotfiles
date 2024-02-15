@@ -30,8 +30,14 @@ for f in $PROJECT_ROOT/.config/*; do
     ln -snfv $f ~/.config/
 done
 
-ln -snfv $PROJECT_ROOT/.gitconfig ~/
+
 ln -snfv $PROJECT_ROOT/.xmonad/xmonad.hs ~/.xmonad/
+
+ln -snfv $PROJECT_ROOT/.gitconfig ~/
+
+ln -snfv $PROJECT_ROOT/.xinitrc ~/
+ln -snfv $PROJECT_ROOT/.xsession ~/
+
 ln -snfv $PROJECT_ROOT/.zshrc ~/
 
 #  終了
