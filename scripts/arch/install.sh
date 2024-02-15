@@ -10,14 +10,24 @@ echo "Installing packages..."
 echo "========================================"
 echo ""
 
-sudo pacman -S --needed \
-    alacritty \
-    git \
-    neovim \
-    polybar nm-connection-editor pcmanfm pacman-contrib \
-    xmonad xmonad-contrib \
-    
-yay -S --needed visual-studio-code-bin
+read -p "Do you want to install packages? (y/n): " answer
+
+case $answer in
+    [Yy]* )
+        sudo pacman -S --needed \
+            alacritty \
+            git \
+            neovim \
+            polybar nm-connection-editor pcmanfm pacman-contrib \
+            xmonad xmonad-contrib \
+            
+        yay -S --needed visual-studio-code-bin
+        ;;
+    * )
+        echo "Installation of packages was skipped."
+        ;;
+esac
+
 
 # 設定ファイルの配置
 echo ""
