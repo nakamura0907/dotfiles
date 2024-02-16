@@ -50,7 +50,10 @@ myBorderWidth = 2
 ------------------------
 
 myStartupHook :: X ()
-myStartupHook = spawnOnce "~/.config/polybar/launch.sh &"
+-- myStartupHook = spawnOnce "~/.config/polybar/launch.sh &"
+myStartupHook = do
+  spawnOnce "~/.config/polybar/launch.sh &"
+  spawnOnce "picom --vsync -b"
 
 ------------------------
 -- Key bindings
