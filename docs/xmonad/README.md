@@ -12,7 +12,7 @@ $ xprop | grep WM_CLASS
 myManageHook :: ManageHook
 myManageHook = composeAll
     [ 
-      -- second string is the WM_CLASS
+      -- second string is the class name
       className =? "Google-chrome" --> doFloat
     ]
 ```
