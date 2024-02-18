@@ -1,11 +1,6 @@
 export ZIPINFOOPT=-OCP932
 export UNZIPORT=-OCP932
 
-volumeicon &
-
-## wallpaper
-nitrogen --restore &
-
 ## IM
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx

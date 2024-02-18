@@ -77,16 +77,16 @@ myManageHook = composeAll
       title =? "ピクチャー イン ピクチャー" --> doFloat
     ]
 
-
-
 ------------------------
 -- Startup Hook
 ------------------------
 
 myStartupHook :: X ()
 myStartupHook = do
-  spawnOnce "~/.config/polybar/launch.sh &"
   spawnOnce "picom --vsync -b"
+  spawnOnce "~/.config/polybar/launch.sh &"
+  spawnOnce "nitrogen --restore &"
+  spawnOnce "volumeicon &"
 
 ------------------------
 -- Run XMonad

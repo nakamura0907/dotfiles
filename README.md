@@ -13,12 +13,12 @@
 - picom
 - starship
 - xmonad
+  - volumeicon
   - xmonad-contrib
   - i3lock-fancy
+  - nitrogen
   - pulseaudio
 - git
 - zsh
-  - volumeicon
-  - nitrogen
   - fcitx5
   - keychain

@@ -11,7 +11,7 @@ sudo pacman -S --needed \
     neovim \
     polybar nm-connection-editor pcmanfm pacman-contrib \
     picom \
-    xmonad xmonad-contrib dmenu \
+    xmonad xmonad-contrib dmenu nitrogen volumeicon \
     git \
     zsh \
     
