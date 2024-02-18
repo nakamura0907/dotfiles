@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# パッケージのインストール
 echo ""
 echo "========================================"
 echo "Installing packages..."
@@ -9,9 +8,11 @@ echo ""
 
 sudo pacman -S --needed \
     alacritty \
-    git \
     neovim \
     polybar nm-connection-editor pcmanfm pacman-contrib \
-    xmonad xmonad-contrib \
+    picom \
+    xmonad xmonad-contrib dmenu \
+    git \
+    zsh \
     
 yay -S --needed visual-studio-code-bin
