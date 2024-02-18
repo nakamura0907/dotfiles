@@ -6,6 +6,7 @@ import XMonad.Hooks.StatusBar.PP
 import XMonad.Util.EZConfig (additionalKeysP)
 import XMonad.Util.SpawnOnce (spawnOnce)
 import XMonad.Layout.Spacing
+import XMonad.Actions.FloatKeys
 
 ------------------------
 -- General Settings
@@ -36,6 +37,14 @@ myKeys =
   [ 
     ("<XF86AudioMute>", spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle"),
     ("M-S-r", spawn "xmonad --recompile; xmonad --restart"),
+    -- float window resize
+    ("M-d", withFocused $ keysResizeWindow (-10, -10) (0.5, 0.5)),
+    ("M-s", withFocused $ keysResizeWindow ( 10,  10) (0.5, 0.5)),
+    -- float window move
+    ("M-S-<L>", withFocused $ keysMoveWindow (-10,  0)),
+    ("M-S-<R>", withFocused $ keysMoveWindow ( 10,  0)),
+    ("M-S-<U>", withFocused $ keysMoveWindow (  0,-10)),
+    ("M-S-<D>", withFocused $ keysMoveWindow (  0, 10)),
     ("M1-S-l", spawn "i3lock-fancy")
   ]
 
