@@ -36,6 +36,8 @@ myKeys :: [(String, X ())]
 myKeys =
   [ 
     ("<XF86AudioMute>", spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle"),
+    ("<XF86MonBrightnessDown>", spawn "brightnessctl set 5%-"),
+    ("<XF86MonBrightnessUp>", spawn "brightnessctl set 5%+"),
     ("M-S-r", spawn "xmonad --recompile; xmonad --restart"),
     -- float window resize
     ("M-d", withFocused $ keysResizeWindow (-10, -10) (0.5, 0.5)),
