@@ -1,3 +1,6 @@
+```bash
+```
+
 ## Install Guide
 
 https://wiki.archlinux.jp/index.php/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%82%AC%E3%82%A4%E3%83%89
@@ -30,6 +33,12 @@ $ yay -S gdb ninja gcc cmake meson libxcb xcb-proto xcb-util xcb-util-keysyms li
 $ git clone --recursive https://github.com/hyprwm/Hyprland
 $ cd Hyprland
 $ make all && sudo make install
+```
+
+## Multimedia
+
+```bash
+$ sudo pacman -S alsa-utils pulseaudio pulseaudio-alsa pamixer
 ```
 
 ## CLI
