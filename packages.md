@@ -11,13 +11,15 @@ $ sudo pacman -S \
     # CLI
     zsh starship \
     # Terminal
-    alacritty ttf-dejavu \
+    alacritty ttf-hack-nerd \
     # Backlight
     brightnessctl \
     # Wayland utilities
     swayidle nwg-bar \
     # File Manager
-    dolphin \
+    thunar gvfs \
+    # Status Bar
+    waybar otf-font-awesome \
 
 $ yay -S  \
     # Hyprland
@@ -25,11 +27,12 @@ $ yay -S  \
     # Wayland utilities
     swaylock-effects-git
 
+# Hyprland
 $ git clone --recursive https://github.com/hyprwm/Hyprland
 $ cd Hyprland
 $ make all && sudo make install
 
-# Oh My Zsh
+# Zsh
 $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 $ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 $ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
