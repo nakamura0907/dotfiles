@@ -49,4 +49,6 @@ $ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTO
 
 ```bash
 $ sudo pacman -S alacritty ttf-dejavu
+
+$ sudo pacman -S brightnessctl
 ```
