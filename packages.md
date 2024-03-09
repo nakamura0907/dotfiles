@@ -3,7 +3,7 @@ $ sudo pacman -S \
     # Install Guide
     networkmanager neovim grub efibootmgr sudo git go \
     # Security
-    pass ufw \
+    pass ufw polkit polkit-kde-agent \
     # Multimedia
     alsa-utils pulseaudio pulseaudio-alsa pamixer \
     # Input Method
@@ -15,7 +15,9 @@ $ sudo pacman -S \
     # Backlight
     brightnessctl \
     # Wayland utilities
-    swayidle
+    swayidle nwg-bar \
+    # File Manager
+    dolphin \
 
 $ yay -S  \
     # Hyprland
