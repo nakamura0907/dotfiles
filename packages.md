@@ -20,6 +20,7 @@ $ sudo pacman -S \
     thunar gvfs \
     # Status Bar
     waybar otf-font-awesome \
+    # Development
 
 $ yay -S  \
     # Hyprland
