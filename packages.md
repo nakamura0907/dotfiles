@@ -29,7 +29,7 @@ $ sudo pacman -S \
     zsh starship \
     alacritty ttf-hack-nerd \
     thunar gvfs \
-    docker docker-compose \
+    docker docker-compose github-cli \
     noto-fonts-cjk fcitx5-im fcitx5-mozc \
     brightnessctl
 $ yay -S  \
