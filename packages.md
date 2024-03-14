@@ -59,11 +59,15 @@ $ sudo pacman -S \
 
 ```bash
 $ sudo pacman -S \
+    xdg-desktop-portal-hyprland \
     swayidle nwg-bar \
-    waybar otf-font-awesome
+    waybar otf-font-awesome \
+    sddm
 $ yay -S  \
+    # Hyprland dependencies
     gdb ninja gcc cmake meson libxcb xcb-proto xcb-util xcb-util-keysyms libxfixes libx11 libxcomposite xorg-xinput libxrender pixman wayland-protocols cairo pango seatd libxkbcommon xcb-util-wm \
-    swaylock-effects-git
+    swaylock-effects-git \
+    sddm-sugar-dark
 
 ## Hyprland
 $ git clone --recursive https://github.com/hyprwm/Hyprland
