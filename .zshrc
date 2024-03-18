@@ -53,12 +53,6 @@ export PATH="$PATH:$HOME/.cargo/bin"
 # Go
 export PATH="$PATH:$(go env GOPATH)/bin"
 
-# bun
-[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
-
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
 # pnpm
 export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
@@ -72,3 +66,4 @@ esac
 # ----------------------------------------
 
 source /usr/share/nvm/init-nvm.sh # Node Version Manager
+
