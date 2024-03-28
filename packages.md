@@ -46,7 +46,7 @@ $ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTO
 
 ```bash
 $ sudo pacman -S \
-    obsidian libreoffice-fresh
+    obsidian libreoffice-fresh libreoffice-fresh-ja
 ```
 
 # Security
