@@ -1,0 +1,12 @@
+{
+  "coc.nvim": { "branch": "release", "commit": "196d8f0314bc6199f8243f00411ca7d87adc3c30" },
+  "fern-renderer-nerdfont.vim": { "branch": "master", "commit": "84fae1b9caf2ec9e185bf150ce5e85cf8f18a268" },
+  "fern.vim": { "branch": "main", "commit": "928d355e4c06e08eb3c9062485a661f1d37b01d1" },
+  "lazy.nvim": { "branch": "main", "commit": "65887ea871d44822bff47504202b3643f29d614e" },
+  "nerdfont.vim": { "branch": "master", "commit": "e054fd135ee73db37cd5bf545e0ff9948ffec7bc" },
+  "nvim-web-devicons": { "branch": "master", "commit": "3ee60deaa539360518eaab93a6c701fe9f4d82ef" },
+  "plenary.nvim": { "branch": "master", "commit": "8aad4396840be7fc42896e3011751b7609ca4119" },
+  "telescope-frecency.nvim": { "branch": "master", "commit": "2a22815b0928087a5989e2a8e836b13b46015505" },
+  "telescope.nvim": { "branch": "master", "commit": "6312868392331c9c0f22725041f1ec2bef57c751" },
+  "tokyonight.nvim": { "branch": "main", "commit": "f4b415bfbce390866a83277db42cf6aa94230728" }
+}
