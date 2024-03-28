@@ -41,6 +41,7 @@ alias ll="ls -AlhF"
 
 # others
 alias vim="nvim"
+alias suvim="sudo -E nvim "
 
 # ----------------------------------------
 # 3. environment variables
