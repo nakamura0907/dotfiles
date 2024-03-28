@@ -37,5 +37,4 @@ TERM = "alacritty"
 size = 12
 
 [font.normal]
-# fallback = ["Hack Nerd Font"]
-family = "DejaVu Sans Mono"
+family = "Hack Nerd Font"
