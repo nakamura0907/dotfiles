@@ -30,7 +30,7 @@ $ sudo pacman -S \
     alacritty ttf-hack-nerd \
     thunar gvfs \
     docker docker-compose github-cli \
-    nodejs rust \
+    nodejs npm rust \
     noto-fonts-cjk fcitx5-im fcitx5-mozc \
     brightnessctl
 $ yay -S  \
