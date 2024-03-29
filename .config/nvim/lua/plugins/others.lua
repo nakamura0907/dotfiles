@@ -18,5 +18,16 @@ return {
         config = function()
             require('lualine').setup()
         end
+    },
+    {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    },
+    {
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+        config = true
     }
 }
