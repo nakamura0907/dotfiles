@@ -1,13 +1,6 @@
 local opts = { noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
 
--- Fuzzy Finder
-keymap("n", "<C-p>", ":Telescope find_files<CR>", opts)
-keymap("n", "<C-g>", ":Telescope live_grep<CR>", opts)
-
--- File Explorer
-keymap("n", "<C-n>", ":Fern . -reveal=% -drawer -toggle<CR>", opts)
-
 -- Terminal
 vim.api.nvim_create_user_command("Term", function()
     vim.cmd("tabnew term://zsh")
