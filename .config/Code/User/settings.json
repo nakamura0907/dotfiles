@@ -1,0 +1,11 @@
+{
+  "editor.fontFamily": "'Hack Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
+  "workbench.iconTheme": "material-icon-theme",
+  "vim.handleKeys": {
+    "<C-x>": false, //切り取り
+    "<C-f>": false, //検索
+    "<C-a>": false, //全選択
+    "<C-p>": false //ファイル検索
+  },
+  "vim.useSystemClipboard": true
+}
