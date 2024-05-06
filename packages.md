@@ -30,7 +30,7 @@ $ sudo pacman -S \
     alacritty ttf-hack-nerd \
     thunar gvfs \
     docker docker-compose github-cli \
-    nodejs npm rust \
+    nodejs npm rustup \
     noto-fonts-cjk fcitx5-im fcitx5-mozc \
     brightnessctl
 $ yay -S  \
@@ -66,7 +66,8 @@ $ sudo pacman -S \
     sddm
 $ yay -S  \
     # Hyprland dependencies
-    gdb ninja gcc cmake meson libxcb xcb-proto xcb-util xcb-util-keysyms libxfixes libx11 libxcomposite xorg-xinput libxrender pixman wayland-protocols cairo pango seatd libxkbcommon xcb-util-wm \
+    gdb ninja gcc cmake meson libxcb xcb-proto xcb-util xcb-util-keysyms libxfixes libx11 libxcomposite xorg-xinput libxrender pixman wayland-protocols cairo pango seatd libxkbcommon xcb-util-wm xorg-xwayland libinput libliftoff libdisplay-info cpio tomlplusplus hyprlang hyprcursor \
+    hyprwayland-scanner \
     hyprshot swaylock-effects-git \
     sddm-sugar-dark
 
@@ -74,4 +75,9 @@ $ yay -S  \
 $ git clone --recursive https://github.com/hyprwm/Hyprland
 $ cd Hyprland
 $ make all && sudo make install
+
+## Rust
+$ cargo install cargo-generate
+$ cargo install wasm-pack
+$ rustup target add wasm32-unknown-unknown
 ```
