@@ -10,6 +10,8 @@
 	branch = cat
 	log = less
 [alias]
+	pushf = push --force-with-lease --force-if-includes
+
 	tags = tag -l
 	branches = branch -a
 	remotes = remote -v

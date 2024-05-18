@@ -1,4 +1,5 @@
 {
+  "editor.formatOnSave": true,
   "editor.fontFamily": "'Hack Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
   "workbench.iconTheme": "material-icon-theme",
   "vim.handleKeys": {
