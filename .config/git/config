@@ -10,6 +10,7 @@
 	branch = cat
 	log = less
 [alias]
+	pushoh = push origin HEAD
 	pushf = push --force-with-lease --force-if-includes
 
 	tags = tag -l
@@ -30,3 +31,5 @@
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
+[commit]
+	template = ~/.config/git/.commit_template
