@@ -66,6 +66,9 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+# Other
+export PATH="$PATH:/opt/nvim-linux64/bin"
+
 # ----------------------------------------
 # 4. Others
 # ----------------------------------------

@@ -12,8 +12,17 @@ sudo apt update -y
 echo "パッケージをインストールします"
 sudo apt install -y \
 	git \
-	zsh zsh-autosuggestions zsh-syntax-highlighting \
-	neovim 
+	zsh zsh-autosuggestions zsh-syntax-highlighting 
+
+if command -v nvim >/dev/null 2>&1; then
+	echo "NeoVimはすでにインストール済みです"
+else
+	echo "NeoVimをインストールします"
+	curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+	sudo rm -rf /opt/nvim
+	sudo tar -C /opt -xzf nvim-linux64.tar.gz
+	rm nvim-linux64.tar.gz
+fi
 
 if command -v starship >/dev/null 2>&1; then
 	echo "Starshipはすでにインストール済みです"
@@ -28,6 +37,7 @@ if [ ! -d "$DOTFILES_DIR" ]; then
 	git clone https://github.com/nakamura0907/dotfiles.git "$DOTFILES_DIR"
 else
 	echo "dotfilesリポジトリはすでに存在しています"
+	git -C "$DOTFILES_DIR" pull origin main
 fi
 
 # シンボリックリンクを貼る
