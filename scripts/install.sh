@@ -14,14 +14,14 @@ sudo apt install -y \
 	git \
 	zsh zsh-autosuggestions zsh-syntax-highlighting 
 
-if command -v nvim >/dev/null 2>&1; then
-	echo "NeoVimはすでにインストール済みです"
-else
+if [ ! -d "/opt/nvim-linux64" ]; then
 	echo "NeoVimをインストールします"
 	curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
 	sudo rm -rf /opt/nvim
 	sudo tar -C /opt -xzf nvim-linux64.tar.gz
 	rm nvim-linux64.tar.gz
+else
+	echo "NeoVimはすでにインストール済みです"
 fi
 
 if command -v starship >/dev/null 2>&1; then
