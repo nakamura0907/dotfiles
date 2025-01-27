@@ -69,4 +69,28 @@ else
 	echo "すでにZshがデフォルトシェルです"
 fi
 
+# 開発者ツールのインストール
+if command -v kubectl >/dev/null 2>&1; then
+    echo "kubectlはすでにインストール済みです"
+else
+    echo "kubectlをインストールします"
+
+    sudo apt-get update
+    sudo apt-get install -y \
+        apt-transport-https ca-certificates gnupg
+
+    if [ ! -d "/etc/apt/keyrings" ]; then
+        echo "/etc/apt/keyringsディレクトリを作成します"
+        sudo mkdir -p -m 755 /etc/apt/keyrings
+    fi
+
+    curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.32/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+    sudo chmod 644 /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+
+    echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.32/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
+    sudo chmod 644 /etc/apt/sources.list.d/kubernetes.list
+
+    sudo apt-get update
+    sudo apt-get install -y kubectl
+fi
 
