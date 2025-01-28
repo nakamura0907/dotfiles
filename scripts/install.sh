@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# readonly SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-# readonly PROJECT_ROOT="$(realpath "$SCRIPT_DIR/../../")"
-
 readonly DOTFILES_DIR="$HOME/.dotfiles"
 
 # パッケージのインストール
@@ -70,14 +67,15 @@ else
 fi
 
 # 開発者ツールのインストール
+sudo apt-get update
+sudo apt-get install -y \
+    apt-transport-https ca-certificates gnupg
+
+# kubectl
 if command -v kubectl >/dev/null 2>&1; then
     echo "kubectlはすでにインストール済みです"
 else
     echo "kubectlをインストールします"
-
-    sudo apt-get update
-    sudo apt-get install -y \
-        apt-transport-https ca-certificates gnupg
 
     if [ ! -d "/etc/apt/keyrings" ]; then
         echo "/etc/apt/keyringsディレクトリを作成します"
@@ -93,4 +91,21 @@ else
     sudo apt-get update
     sudo apt-get install -y kubectl
 fi
+
+# Terraform
+if command -v terraform >/dev/null 2>&1; then
+    echo "terraformコマンドはすでにインストール済みです"
+else
+    echo "terraformコマンドをインストールします"
+
+    curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+    gpg --no-default-keyring --keyring /usr/share/keyrings/hashicorp-archive-keyring.gpg --fingerprint
+
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+    sudo apt update
+    
+    sudo apt install -y terraform
+fi
+
+# Ansible
 
