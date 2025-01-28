@@ -71,6 +71,9 @@ sudo apt-get update
 sudo apt-get install -y \
     apt-transport-https ca-certificates gnupg
 
+sudo apt install -y \
+    ansible-core
+
 # kubectl
 if command -v kubectl >/dev/null 2>&1; then
     echo "kubectlはすでにインストール済みです"
@@ -106,6 +109,4 @@ else
     
     sudo apt install -y terraform
 fi
-
-# Ansible
 
