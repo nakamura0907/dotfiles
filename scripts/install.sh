@@ -72,7 +72,8 @@ sudo apt-get install -y \
     apt-transport-https ca-certificates gnupg
 
 sudo apt install -y \
-    ansible-core
+    ansible-core \
+    nodejs
 
 # kubectl
 if command -v kubectl >/dev/null 2>&1; then
@@ -110,3 +111,19 @@ else
     sudo apt install -y terraform
 fi
 
+# pnpm
+if command -v pnpm >/dev/null 2>&1; then
+    echo "pnpmコマンドはすでにインストール済みです"
+else
+    echo "pnpmコマンドをインストールします"
+
+    curl -fsSL https://get.pnpm.io/install.sh | sh -
+fi
+
+if command -v task >/dev/null 2>&1; then
+    echo "taskコマンドはすでにインストール済みです"
+else
+    echo "taskコマンドをインストールします"
+
+    sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b ~/.local/bin
+fi

@@ -51,6 +51,7 @@ alias suvim="sudo -E nvim "
 # ----------------------------------------
 # 3. environment variables
 # ----------------------------------------
+export PATH="$PATH:$HOME/.local/bin"
 
 # Rust
 export PATH="$PATH:$HOME/.cargo/bin"
