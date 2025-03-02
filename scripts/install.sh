@@ -34,6 +34,7 @@ if [ ! -d "$DOTFILES_DIR" ]; then
 	git clone https://github.com/nakamura0907/dotfiles.git "$DOTFILES_DIR"
 else
 	echo "dotfilesリポジトリはすでに存在しています"
+	git -C "$DOTFILES_DIR" stash
 	git -C "$DOTFILES_DIR" pull origin main
 fi
 
@@ -127,3 +128,6 @@ else
 
     sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b ~/.local/bin
 fi
+
+# エラーとなるため
+# source ~/.zshrc
