@@ -57,7 +57,7 @@ export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
 
 # Go
-export PATH="$PATH:$(go env GOPATH)/bin"
+export PATH="$PATH:/usr/local/go/bin"
 
 # pnpm
 export PNPM_HOME="$HOME/.local/share/pnpm"

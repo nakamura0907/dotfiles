@@ -129,5 +129,19 @@ else
     sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b ~/.local/bin
 fi
 
+# golang
+if command -v go >/dev/null 2>&1; then
+    echo "goはインストール済みです"
+else
+    echo "goをインストールします"
+
+    wget https://go.dev/dl/go1.24.1.linux-amd64.tar.gz
+
+    sudo rm -rf /usr/local/go
+    sudo tar -C /usr/local -xzf go1.24.1.linux-amd64.tar.gz
+
+    rm -f go1.24.1.linux-amd64.tar.gz
+fi
+
 # エラーとなるため
 # source ~/.zshrc
